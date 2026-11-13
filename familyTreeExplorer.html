@@ -10,7 +10,56 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
+  <nav class="navbar navbar-dark navbar-expand-lg sticky-top" style="background-color: rgb(147, 150, 155);">
+
+        <div class="container">
+
+        </div>
+
+        <ul class="navbar-nav navList">
 
 
-    <script src="script.js"></script>
+            <li class="nav-item active">
+                <a class="nav-link " href="index.html" id="main-link">Main Index</a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link " href="rainbowParagraphs.html" id="rainbow-link">Rainbow Paragraphs</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="productShelf.html" id="shelf-link">Product Shelf</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="familyTreeExplorer.html" id="tree-link">Family Tree</a>
+            </li>
+             <li class="nav-item">
+                <a class="nav-link" href="childNodeInspector.html" id="inspector-link">Child Node Inspector</a>
+            </li>
+             <li class="nav-item">
+                <a class="nav-link" href="profileCardMakeover.html" id="makeover-link">Profile Card Makeover</a>
+            </li>
+        </ul>
+    </nav>
+
+<div id="grandparent">
+  <div id="parent">
+    <p id="child">I am the child</p>
+  </div>
+</div>
+
+
+    <script>
+      let child = document.getElementById("child");
+      let pahrent = child.parentElement;
+      let grandparent = pahrent.parentElement;
+
+      console.log(pahrent.id);
+      console.log(grandparent.id);
+
+      pahrent.style.backgroundColor = "lightblue";
+      grandparent.style.backgroundColor = "lightgreen";
+      console.log(child.parentElement.parentElement.id);
+      
+      child.textContent = "child sits inside of parent and grandparent";
+
+    </script>
   </body>
